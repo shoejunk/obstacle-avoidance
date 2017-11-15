@@ -1,0 +1,1 @@
+var sHello = 'Hello, file JavaScript World!'; sHello;

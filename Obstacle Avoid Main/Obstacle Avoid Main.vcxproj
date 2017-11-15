@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0EEE3229-4222-4340-87D8-5DE5D031F9BC}</ProjectGuid>
+    <RootNamespace>Obstacle Avoid Main</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>NDEBUG;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;opengl32.lib;glu32.lib;winmm.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ObstacleAvoidMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Circle Bot\Circle Bot.vcxproj">
+      <Project>{37a4a5a4-e93b-42ad-81de-2c7c1d882a37}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Handle\Handle.vcxproj">
+      <Project>{1347840a-610d-4af9-862a-e8161941c6f6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Input\Input.vcxproj">
+      <Project>{1e747905-4f27-4a39-aa1e-c74c3a0d7229}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Messenger\Messenger.vcxproj">
+      <Project>{1afda39a-ad2f-49f7-9465-72d8ad73c231}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Obstacle Creator\Obstacle Creator.vcxproj">
+      <Project>{0ccb5615-d68d-4e9d-a7da-f6c8da8e6131}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Obstacle\Obstacle.vcxproj">
+      <Project>{db8a7e5d-3c74-49bd-a412-60090eb68fe3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenGL 2D Circle\OpenGL 2D Circle.vcxproj">
+      <Project>{0f2d4f70-f1a5-4c0c-aa79-657f169353b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vector\Vector.vcxproj">
+      <Project>{dbf650b0-be7a-4a81-80e8-0b64e87eec8d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows Input\Windows Input.vcxproj">
+      <Project>{117d0197-3bdd-4748-9395-3a1160f82e15}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows OpenGL Window\Windows OpenGL Window.vcxproj">
+      <Project>{e71f1a1f-c2c0-4a7c-bee4-a977ad981872}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows Timer\Windows Timer.vcxproj">
+      <Project>{5e39c834-2057-4906-851c-5ea57ac10cbb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Window\Window.vcxproj">
+      <Project>{ee79a1ab-3bed-47ea-9525-5505190848a6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
