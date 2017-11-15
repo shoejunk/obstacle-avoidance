@@ -7,7 +7,7 @@ It works by using attractors and repellers. The goal node attracts the AI, creat
 
 ## Getting Started
 
-This code was tested in Microsoft Visual Studio 2017 Community. Open ObstacleAvoidance.sln and build with Obstacle Avoid Main as the startup project. It creates a Windows application. Double-click to create obstacles. Right-click and drag to resize obstacles. Left-click and drag to move any object.
+This code was tested in Microsoft Visual Studio Community 2017. Open ObstacleAvoidance.sln and build with Obstacle Avoid Main as the startup project. It creates a Windows application. Double-click to create obstacles. Right-click and drag to resize obstacles. Left-click and drag to move any object.
 
 ## Points of Interest
 
@@ -17,7 +17,7 @@ This code was tested in Microsoft Visual Studio 2017 Community. Open ObstacleAvo
 	* Linked List
 	* Vector
 
-* Note the approach I take to separate the platform-specific logic from the platform-independent. For example, Window is a platform independent representation of a window. It has a pointer to a window implenetation, which handles the platform-specific implementation details of a window. This platform-specific implementation can be swapped out simply by linking in a different platform-specific library.
+* Note the approach I take to separate the platform-specific logic from the platform-independent. For example, Window is a platform independent representation of a window. It has a pointer to a window implementation, which handles the platform-specific implementation details of a window. This platform-specific implementation can be swapped out simply by linking in a different platform-specific library.
 
 * This code includes a messaging system to allow different parts of the engine to communicate while keeping implementation details hidden. A common problem with messaging systems is that a single message may get sent to many listeners and one of those listeners may end up causing another listener to be destroyed. Then when the messaging system tries to send a message to the destroyed listener, the game crashes. My solution to this is to attach listeners to handles wich become invalidated when the listener is destroyed. The messaging system can then detect if the listener was destroyed before trying to send a message to it.
 
